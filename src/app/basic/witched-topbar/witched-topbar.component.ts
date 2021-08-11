@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TopbarOptions } from '../model/topbarOptions';
+import { TopbarOptions } from '../model/topbar-options';
 
 @Component({
   selector: 'be-witched-topbar',
@@ -7,8 +7,8 @@ import { TopbarOptions } from '../model/topbarOptions';
   styleUrls: ['./witched-topbar.component.scss'],
 })
 export class WitchedTopbarComponent implements OnInit {
-  @Input('beOptions')
-  options!: TopbarOptions;
+  @Input('beTopbarOptions')
+  options?: TopbarOptions;
 
   constructor() {}
 
