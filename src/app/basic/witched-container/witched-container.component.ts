@@ -1,3 +1,4 @@
+import { Platform } from '@angular/cdk/platform';
 import { Component, Input, OnInit } from '@angular/core';
 import { ContainerOptions } from '../model/container-options';
 
@@ -10,7 +11,9 @@ export class WitchedContainerComponent implements OnInit {
   @Input('beContainerOptions')
   options!: ContainerOptions;
 
-  constructor() {}
+  constructor(private readonly platform: Platform) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.platform;
+  }
 }
